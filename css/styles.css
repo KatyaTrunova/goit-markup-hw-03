@@ -16,30 +16,57 @@ body {
 }
 .page-header {
   background-color: var(--main-white-color);
+  border-bottom: 1px solid #ECECEC;
 }
+.container{
+  display: flex;
+  align-items:center;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main-nav{
+  display: flex;
+}
+.header-nav {
+  display: flex;
+}
+/* Логотип */
 .logo {
   color: var(--accent-color);
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.19;
+  line-height: 1.2;
   letter-spacing: 0.03em;
+  
 }
+
 .logo-style {
   color: var(--black-color);
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.19;
+  line-height: 1.2;
   letter-spacing: 0.03em;
+ text-decoration: none;
 }
+/* проверить */
+.site-nav .link:not(:last-child){
+  margin-right: 40px;
+}
+/* проверить */
 .logo .logo-style:hover {
   color: var(--accent-color);
 }
-/* применить ховер ко всему лого */
+/*список навигации */
 .site-nav {
   list-style: none;
   display: flex;
+  gap:50px;
+  
 }
 .site-nav .link {
   color: var(--primary-black-color);
@@ -47,13 +74,23 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  margin-top: 32px;
+  margin-bottom: 32px;
+ 
+}
+.site-nav .link .nav-item+ .nav-item {
+  margin-left: 50px;
 }
 .site-nav :hover,
 .site-nav :focus {
   color: var(--accent-color);
 }
+/* список контактов */
 .contact {
   list-style: none;
+  display: flex;
+gap: 50px;
+margin-left: auto;
 }
 .contact .link {
   font-weight: 500;
@@ -61,6 +98,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: inherit;
+
 }
 .mail :focus,
 .mail :hover {
@@ -70,6 +108,7 @@ body {
 .telephone:hover {
   color: var(--accent-color);
 }
+/* секция Герой */
 .hero {
   background-color: var(--back-color);
 }
@@ -79,24 +118,28 @@ body {
   line-height: 1.36;
   color: var(--main-white-color);
 }
+.button{
+  align-items: center;
+  text-align: center;
+}
 .button-primary {
   color: var(--main-white-color);
   background-color: var(--accent-color);
   border: transparent;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1, 88;
   display: flex;
-  align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
   border-radius: 4px;
   cursor: pointer;
+  line-height: 1.88;
 }
 .button-primary:hover .button-primary:focus .button-primary:active {
   color: var(--main-white-color);
   background-color: var(--accent-color);
 }
+/* секция преимущества компании */
 .company-benefits {
   background-color: inherit;
 }
@@ -114,6 +157,7 @@ body {
 }
 .feature-list {
   list-style: none;
+  display: flex;
 }
 /* убрать точки списка */
 .benefits {
@@ -129,6 +173,7 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
+/* секция рабочий процесс */
 .work-process {
   color: var(--primary-black-color);
   font-weight: 700;
@@ -136,12 +181,20 @@ body {
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-left: auto;
+  margin-right: auto;
 }
 .work-item {
   list-style: none;
+  display: flex;
 }
+/* секция сотрудники */
 .team {
   background-color: var(--btn-color);
+height: 648px;
+left: 0px;
+padding-right:30px ;
+padding-left: 30px;
 }
 .team-title {
   color: var(--primary-black-color);
@@ -151,9 +204,13 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   list-style: none;
+  margin-left: auto;
+    margin-right: auto;
+    width: 264px;
 }
 .team-list {
   list-style: none;
+  display: flex;
 }
 .name {
   color: var(--primary-black-color);
@@ -169,6 +226,7 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
 }
+/* Футер */
 .page-footer {
   background-color: var(--back-color);
 }
@@ -180,6 +238,7 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
+/* логотип футера */
 .logo-type {
   color: var(--main-white-color);
   font-family: "Raleway";
@@ -187,6 +246,7 @@ body {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  
 }
 .logo-web :hover .logo-web :focus {
   color: var(--accent-color);
@@ -223,15 +283,15 @@ body {
 }
 a {
   text-decoration: none;
+  align-self: center;
 }
-img {
-  display: block;
-  height: auto;
-}
+/* Портфолио */
 .btn-port {
   list-style: none;
+  display: flex;
+  justify-content: center;
 }
-
+/* кнопки фильтра работ */
 .btn-portfolio {
   color: var(--primary-black-color);
   background-color: var(--btn-color);
@@ -242,27 +302,80 @@ img {
   letter-spacing: 0.03em;
   cursor: pointer;
   border: transparent;
+  border-radius: 4px;
+  padding: 6px 22px;
 }
 .btn-portfolio:hover,
 .btn-portfolio:focus {
   color: var(--main-white-color);
   background-color: var(--accent-color);
+  box-shadow: 0px, 3px 1px; 
 }
+/* примеры работ */
 .examples {
   list-style: none;
 }
 .product-title {
   font-weight: 700;
   font-size: 18px;
-  line-height: 2, 0;
+  line-height: 2.0;
   letter-spacing: 0.06em;
   color: var(--primary-black-color);
 }
 .product-type {
   font-size: 16px;
-  line-height: 1, 88;
+  line-height: 1.88;
   letter-spacing: 0.03em;
+}
+.image {
+  width:380px;
+  margin: 30px;
+  background-color: var(--main-white-color);
+ 
+  /* width:calc((100%-60px)/3); */
+}
+.image :nth-child(3n){
+  margin-right: 0;
+}
+.image:nth-last-child(-n+3){
+  margin-bottom: 0;
 }
 address {
   font-style: normal;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+.list{
+  list-style:none ;
+  padding-left: 0;
+  margin: 0;
+}
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+flex-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+  image {
+    display: flex;
+  }

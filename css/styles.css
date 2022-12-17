@@ -23,99 +23,32 @@ body {
 .page-header {
   background-color: var(--main-white-color);
   border-bottom: 1px solid #ECECEC;
-  height: 80px;
   align-items: center;
   display: flex;
+  
 }
+.main-nav {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 0;
+  padding-right: 0;
+
+}
+
 /* containers */
-.main-nav{
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-  padding-left: 0;
-  padding-right: 0;
-}
-.container-hero-title{
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-  padding-left: 0;
-  padding-right: 0;
-  flex-direction: column;
-  align-items: center;
-}
-.container-hero-benefits{
-  display: flex;
-  align-items:center;
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.container-work{
-  width: 1200px;
-  display: flex;
- margin-right: auto;
- margin-left: auto;
- padding-left: 15px;
- padding-right: 15px;
- flex-direction: column;
- align-items: center;
-}
-.container-team{
-  display: flex;
-  margin-right: auto;
-  margin-left: auto;
+.container {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  flex-direction: column;
-  align-items: center;
-}
-.container-footer{
-  display: flex;
-  margin-left: auto;
+  margin-left: auto ;
   margin-right: auto;
-  width: 1200px;
-  padding-left: 0;
-  padding-right: 0;
-  flex-direction: column;
- text-align: left;
-}
-.container-phone{
-  display: flex;
-  margin-left: auto;
-  width: 1200px;
-  padding-right: 15px;
-
-}
-.container-mail{
-  display: flex;
-  margin-left: auto;
-  width: 1200px;
-  padding-right: 15px;
-}
-.flex-container{
-  display: flex;
   flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-
 }
-.container-cards{
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
+.section{
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 /*  */
 .header-nav {
@@ -164,7 +97,6 @@ body {
   letter-spacing: 0.02em;
   margin-top: 32px;
   margin-bottom: 32px;
- 
 }
 .site-nav .link .nav-item+ .nav-item {
   margin-left: 50px;
@@ -201,9 +133,10 @@ align-items: center;
 /* секция Герой */
 .hero {
   background-color: var(--back-color);
-  height: 600px;
   display: flex;
   align-items: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .hero-title {
   font-weight: 900;
@@ -215,6 +148,7 @@ align-items: center;
   text-align: center;
   text-transform: uppercase;
   max-width: 696px;
+  
 }
 .button{
   align-items: center;
@@ -245,7 +179,6 @@ align-items: center;
 /* секция преимущества компании */
 .company-benefits {
   background-color: inherit;
-  height: 80px;
 }
 .visually-hidden {
   position: absolute;
@@ -281,7 +214,7 @@ align-items: center;
 }
 /* секция рабочий процесс */
 .work{
-  height: 532px;
+  padding-top: 0;
 }
 .work-process {
   color: var(--primary-black-color);
@@ -304,7 +237,6 @@ align-items: center;
 /* секция сотрудники */
 .team {
   background-color: var(--btn-color);
-height: 648px;
 left: 0px;
 padding-right:30px ;
 padding-left: 30px;
@@ -350,7 +282,8 @@ padding-left: 30px;
   background-color: var(--back-color);
   display: flex;
   align-items: flex-start;
-  height: 252px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .logo-web {
   color: var(--accent-color);
@@ -421,9 +354,6 @@ a {
   align-items: center;
 }
 /* Портфолио */
-.projects{
-  height: 1548px;
-}
 .btn-port {
   list-style: none;
   display: flex;
@@ -431,6 +361,7 @@ a {
   margin: 0 auto;
   flex-wrap: wrap;
   margin-bottom: 50px;
+  justify-content: center;
 }
 /* кнопки фильтра работ */
 .btn-li{
@@ -545,4 +476,12 @@ border-radius: 0px 0px 4px 4px;
 }
 .header-logo{
   display: flex;
+}
+.btn-port{
+  display: flex;
+  margin: 0,auto;
+}
+.header-nav {
+  display: flex;
+  justify-content: center;
 }
